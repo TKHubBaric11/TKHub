@@ -1,7 +1,7 @@
-_G.name_game = "KietDz"
+_G.name_game = "King_Legacy2ug"
 _G.Setting = {
     main_tool = {
-        "Tool : Mele"
+        "Tool : Sword"
     },
     auto_farm = {
         false,
@@ -199,13 +199,13 @@ _G.Setting = {
 }
 function LoadSettings()
     if readfile and (writefile and (isfile and isfolder)) then
-        if not isfolder("KIET HUB") then
-            makefolder("KIET HUB")
+        if not isfolder("MILU HUB") then
+            makefolder("MILU HUB")
         end
-        if not isfolder("KIET HUB/Save Script/") then
-            makefolder("KIET HUB/Save Script/")
+        if not isfolder("MILU HUB/Save Script/") then
+            makefolder("MILU HUB/Save Script/")
         end
-        local vu1 = "KIET HUB/Save Script/" .. _G.name_game .. ".json"
+        local vu1 = "MILU HUB/Save Script/" .. _G.name_game .. ".json"
         if isfile(vu1) and readfile(vu1) ~= "" then
             local v2, v3 = pcall(function()
                 return game:GetService("HttpService"):JSONDecode(readfile(vu1))
@@ -232,7 +232,7 @@ function LoadSettings()
 end
 function SaveSettings()
     if readfile and (writefile and (isfile and isfolder)) then
-        local v8 = "KIET HUB/Save Script/" .. _G.name_game .. ".json"
+        local v8 = "MILU HUB/Save Script/" .. _G.name_game .. ".json"
         if isfile(v8) then
             local v9, v10, v11 = pairs(_G.Setting)
             local v12 = {}
@@ -861,26 +861,26 @@ function make_onof(pu144, p145)
     vu146.Position = UDim2.new(0.15162201, 0, 0.233285708, 0)
     vu146.Size = UDim2.new(0, 50, 0, 50)
     vu146.Font = Enum.Font.ArialBold
-    vu146.Text = "MỞ"
+    vu146.Text = "Open"
     vu146.TextColor3 = Color3.fromRGB(250, 255, 250)
     vu146.TextSize = 20
     vu146.BorderColor3 = Color3.fromRGB(250, 250, 250)
     vu146.Transparency = 0
     v147.Parent = vu146
     vu146.MouseButton1Down:connect(function()
-        if vu146.Text ~= "MỞ" then
-            if vu146.Text == "ĐÓNG" then
-                vu146.Text = "MỞ"
+        if vu146.Text ~= "Open" then
+            if vu146.Text == "Close" then
+                vu146.Text = "Open"
                 pu144.Visible = false
             end
         else
-            vu146.Text = "ĐÓNG"
+            vu146.Text = "Close"
             pu144.Visible = true
         end
     end)
 end
 make_screengui(v18)
-make_mainframe(vu19, vu20, vu35, v18, "KIET HUB | Main | " .. _G.linkdis)
+make_mainframe(vu19, vu20, vu35, v18, "MILU HUB | Main | " .. _G.linkdis)
 make_onof(vu19, v18)
 v21.Name = "sea"
 v21.Parent = vu19
@@ -956,8 +956,8 @@ local function vu160()
     end
     return table.concat(v154, "\n")
 end
-if _G.KIET_Load == nil then
-    _G.KIET_Load = "Key"
+if _G.NTT_Load == nil then
+    _G.NTT_Load = "Key"
     spawn(function()
         while task.wait() do
             pcall(function()
@@ -2574,7 +2574,7 @@ function opez()
     }
     game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(v194))
 end
-local vu195 = "KIET_HUB"
+local vu195 = "NTT_HUB"
 local vu196 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 local function vu205(p197)
     return (p197:gsub(".", function(p198)
@@ -3013,7 +3013,7 @@ t_b3.MouseButton1Down:connect(function()
 end)
 make_button(t_f4, t_b4, vu26, "Sever Hop", 0.38)
 t_b4.MouseButton1Down:connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TKHubBaric11/Svv/refs/heads/main/mainsvv"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NTTTTTTTT/Main/main/Svv"))()
 end)
 make_select1(cb_f1, cb_b1, vu27, _("player"), 0.03)
 cb_b1.MouseButton1Down:connect(function()
@@ -4673,40 +4673,40 @@ function b_page(p434, p435)
     vu20.Text = p435
 end
 v36.MouseButton1Down:connect(function()
-    b_page(vu22, "KIET HUB | Main | " .. _G.linkdis)
+    b_page(vu22, "MILU HUB | Main | " .. _G.linkdis)
 end)
 v37.MouseButton1Down:connect(function()
-    b_page(vu23, "KIET HUB | Start | " .. _G.linkdis)
+    b_page(vu23, "MILU HUB | Start | " .. _G.linkdis)
 end)
 v39.MouseButton1Down:connect(function()
-    b_page(vu25, "KIET HUB | Setting | " .. _G.linkdis)
+    b_page(vu25, "MILU HUB | Setting | " .. _G.linkdis)
 end)
 v40.MouseButton1Down:connect(function()
-    b_page(vu26, "KIET HUB | Teleport | " .. _G.linkdis)
+    b_page(vu26, "MILU HUB | Teleport | " .. _G.linkdis)
 end)
 v41.MouseButton1Down:connect(function()
-    b_page(vu27, "KIET HUB | Combat | " .. _G.linkdis)
+    b_page(vu27, "MILU HUB | Combat | " .. _G.linkdis)
 end)
 v38.MouseButton1Down:connect(function()
-    b_page(vu24, "KIET HUB | Player/Mod | " .. _G.linkdis)
+    b_page(vu24, "MILU HUB | Player/Mod | " .. _G.linkdis)
 end)
 v42.MouseButton1Down:connect(function()
-    b_page(vu28, "KIET HUB | Item/Boss | " .. _G.linkdis)
+    b_page(vu28, "MILU HUB | Item/Boss | " .. _G.linkdis)
 end)
 v43.MouseButton1Down:connect(function()
-    b_page(vu29, "KIET HUB | Sever | " .. _G.linkdis)
+    b_page(vu29, "MILU HUB | Sever | " .. _G.linkdis)
 end)
 v44.MouseButton1Down:connect(function()
-    b_page(vu30, "KIET HUB | Dungeon | " .. _G.linkdis)
+    b_page(vu30, "MILU HUB | Dungeon | " .. _G.linkdis)
 end)
 v45.MouseButton1Down:connect(function()
-    b_page(vu31, "KIET HUB | Fish | " .. _G.linkdis)
+    b_page(vu31, "MILU HUB | Fish | " .. _G.linkdis)
 end)
 v46.MouseButton1Down:connect(function()
-    b_page(vu32, "KIET HUB | Esp | " .. _G.linkdis)
+    b_page(vu32, "MILU HUB | Esp | " .. _G.linkdis)
 end)
 v47.MouseButton1Down:connect(function()
-    b_page(vu33, "KIET HUB | Shop | " .. _G.linkdis)
+    b_page(vu33, "MILU HUB | Shop | " .. _G.linkdis)
 end)
 _G.webhook = {
     sk = "https://discord.com/api/webhooks/1276927002359758930/VOB9dUxSgoZSYpuZAeBAGNxHLqXrkvGuOlhpLVS1wBky1UXDA4FtI5TQcQ1V5c5V_a-z",
